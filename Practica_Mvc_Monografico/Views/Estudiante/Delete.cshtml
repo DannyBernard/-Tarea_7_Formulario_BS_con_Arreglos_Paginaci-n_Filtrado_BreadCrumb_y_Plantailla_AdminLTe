@@ -1,0 +1,152 @@
+﻿@model Practica_Mvc_Monografico.Models.Estudiante
+
+@{
+	string t = "Borrar Estuduante";
+	ViewData["Title"] = t;
+	Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>@t</h1>
+
+<h3>Esta seguro de eliminar este estudiante?</h3>
+<div>
+	<div class="box box-primary collapsed-box">
+		<div class="box-header">
+			<h4>Estudiante</h4>
+			<hr />
+			<dl class="row">
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.IDEstudiante)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.IDEstudiante)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Matricuala)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Matricuala)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Cedula)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Cedula)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.FechaNacimiento)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.FechaNacimiento)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.FechaIngreso)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.FechaIngreso)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Nombre)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Nombre)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Apellido)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Apellido)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Sexo)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Sexo)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.EstadoCivil)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.EstadoCivil)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Ocupacion)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Ocupacion)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.TipoDeSangre)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.TipoDeSangre)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Nacionalidad)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Nacionalidad)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Religion)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Religion)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Telefono)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Telefono)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Email)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Email)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.NombrePadre)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.NombrePadre)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.NombreMadre)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.NombreMadre)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Direccion)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Direccion)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Tipocolegio)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Tipocolegio)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Carrera)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Carrera)
+				</dd>
+				<dt class="col-sm-2">
+					@Html.DisplayNameFor(model => model.Observaciones)
+				</dt>
+				<dd class="col-sm-10">
+					@Html.DisplayFor(model => model.Observaciones)
+				</dd>
+			</dl>
+
+			<form asp-action="Delete">
+				<input type="submit" value="Delete" class="btn btn-danger" /> |
+				<a asp-action="Index">Back to List</a>
+			</form>
+		</div>
+</div>
+</div>

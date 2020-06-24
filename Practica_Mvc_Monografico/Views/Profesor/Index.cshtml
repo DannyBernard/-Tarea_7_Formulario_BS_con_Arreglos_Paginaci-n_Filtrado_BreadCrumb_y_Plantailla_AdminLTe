@@ -1,0 +1,193 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Practica_Mvc_Monografico.Models.Profesor>
+@{
+	string t = "Borrar Profesor";
+	ViewData["Title"] = t;
+	Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>@t</h1>
+<div>
+	<form method="get" class="form-inline" asp-action="Index">
+		<input name="filter" class="form-control" placeholder="Filtro"
+			   value="@Model.RouteValue["Filter"]" />
+		<button type="submit" class="btn  btn-default">
+			<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+		</button>
+		<br />
+		<a asp-action="Create" class="btn btn-primary btn-sm pull-right">
+			<span class="glyphicon glyphicon-plus"></span>  Crear Profesor
+		</a>
+		<br />
+	</form>
+</div>
+<br />
+<p>
+
+</p>
+<div class="box box-info table-responsive">
+	<table class="table ">
+		<thead>
+			<tr>
+				<th>
+					@Html.SortableHeaderFor(model => model.IDProfesor)
+				</th>
+				<th>
+					@Html.SortableHeaderFor(model => model.Codigo)
+				</th>
+				<th>
+					@Html.SortableHeaderFor(model => model.Cedula)
+				</th>
+				<th>
+					@Html.SortableHeaderFor(model => model.FechaNacimiento)
+				</th>
+				<th>
+					@Html.SortableHeaderFor(model => model.FechaIngreso)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Nombre)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Apellido)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Sexo)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.EstadoCivil)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Ocupacion)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.TipoDeSangre)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Nacionalidad)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Religion)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Telefono)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Email)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Direccion)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Tipocolegio)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Carrera)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.GradoAcademico)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.CategoriaPorfersional)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Facultad)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Asignaturas)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Observaciones)
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+	
+		<tbody>
+		
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.IDProfesor)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Codigo)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Cedula)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.FechaNacimiento)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.FechaIngreso)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Nombre)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Apellido)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Sexo)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.EstadoCivil)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Ocupacion)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.TipoDeSangre)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Nacionalidad)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Religion)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Telefono)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Email)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Direccion)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Tipocolegio)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Carrera)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.GradoAcademico)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.CategoriaPorfersional)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Facultad)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Asignaturas)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Observaciones)
+						</td>
+
+						<td>
+
+							@Html.ActionLink("Editar", "Edit", new { id = item.IDProfesor }) |
+							@Html.ActionLink("Detalle", "Details", new { id = item.IDProfesor }) |
+							@Html.ActionLink("Borrar", "Delete", new { id = item.IDProfesor })
+
+						</td>
+
+					</tr>
+				}
+			
+		</tbody>
+		
+	</table>
+</div>
